@@ -1,0 +1,22 @@
+{
+	"agents": "./agents/",
+	"author": {
+		"name": "Lauren Tan"
+	},
+	"description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence.",
+	"displayName": "pstack",
+	"homepage": "https://github.com/justin-mendonca/pstack",
+	"keywords": [
+		"pstack",
+		"poteto-mode",
+		"workflow",
+		"principles",
+		"agent-style",
+		"subagents",
+		"unslop"
+	],
+	"license": "MIT",
+	"name": "pstack",
+	"repository": "https://github.com/justin-mendonca/pstack",
+	"skills": "./skills/"
+}
