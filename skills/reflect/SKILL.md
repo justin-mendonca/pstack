@@ -56,7 +56,7 @@ Move any Accepted item that a lint rule, script, metadata flag, or runtime check
 
 ## 5. Apply
 
-Present the synthesizer's full Accepted / Rejected / Backlog output and wait for explicit approval before applying any Accepted edit. The user picks the subset and may redirect routings. Skill changes affect every future agent in the org. Do not auto-apply.
+Present the synthesizer's full Accepted / Rejected / Backlog output and wait for explicit approval before applying any Accepted edit. The user picks the subset and may redirect routings. Skill changes affect every future agent in the org. Do not auto-apply. Route edits to user-level (global) skills by default. Propose edits to project-level team skills only when the user explicitly asks; otherwise file them as suggestions for the team.
 
 File each Backlog item to your team's devex or backlog tracker without waiting. Only the Accepted list waits for approval.
 
