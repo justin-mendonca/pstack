@@ -65,6 +65,8 @@ git merge origin/main
 
 There, `/poteto-mode` is `/poteto-mode` rather than `/pstack:poteto-mode`, and the `subagent_type: "poteto-agent"` lines in the skills resolve as written. Do not install the plugin on the same machine, or every skill registers twice.
 
+The whole path from a bare laptop, including permissions, the verification skill, and the update steps, is in [`SETUP.md`](./SETUP.md).
+
 
 ## Skills
 
