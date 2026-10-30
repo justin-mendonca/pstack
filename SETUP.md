@@ -125,7 +125,8 @@ Do not point the branch upstream at `origin/main` to save the second command. A 
 
 ## When something goes wrong
 
-- A merge conflict on update. It will be in one of the four edited playbook lines or the `poteto-mode` harness list. Keep upstream's new wording and put your line back.
+- A merge conflict on update. It will be in one of the four edited playbook lines. Keep upstream's new wording and put your line back.
 - A skill reads as missing after an update. `link.sh` was not rerun.
 - The agent stops behaving like poteto mode partway through. The mode is manual-invocation only, so a compaction can drop it. The global block in step 2 tells it to reread `~/.claude/skills/poteto-mode/SKILL.md`, which only works if that block is installed and the session was started after it.
+- A step tries the Skill tool and gets a refusal for a pstack skill. Same cause. Most pstack skills are manual-invocation only, and the global block is what tells the agent to read their `SKILL.md` directly instead.
 - A pstack step needs a Cursor-only feature such as Bugbot or an automation. It should print `Skipped in Claude Code: <step>. <reason>.` and continue. If it stops instead, the adapter in `docs/harness/claude-code.md` was not read.

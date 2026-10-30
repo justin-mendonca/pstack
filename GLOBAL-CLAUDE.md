@@ -28,4 +28,3 @@ Paste this file into `~/.claude/CLAUDE.md` on the work laptop after cloning and 
 ## Writing
 
 - Replies follow the rules in `~/.claude/skills/unslop/SKILL.md`. Read it once, then write clean as you go: short declarative sentences, no long dashes, no chatbot filler, plain words over jargon.
-- Name each pstack principle that changed a decision, and cite only the ones whose `SKILL.md` you read this session.
