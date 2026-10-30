@@ -50,6 +50,8 @@ git clone -b work-customizations https://github.com/justin-mendonca/pstack.git ~
 
 `link.sh` links every skill into `~/.claude/skills/` and both agents into `~/.claude/agents/`. Run it again after each update, because a skill that upstream added has no link yet.
 
+Then copy `GLOBAL-CLAUDE.md` into `~/.claude/CLAUDE.md`. It carries the mode pin, the satellite read rule, the GitLab forge, and the Jira handoff.
+
 To update:
 
 ```bash
