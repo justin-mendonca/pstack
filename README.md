@@ -55,8 +55,14 @@ Then copy `GLOBAL-CLAUDE.md` into `~/.claude/CLAUDE.md`. It carries the mode pin
 To update:
 
 ```bash
-cd ~/work/pstack && git fetch origin && git merge origin/main && ./link.sh
+cd ~/work/pstack
+git fetch origin
+git merge origin/work-customizations
+git merge origin/main
+./link.sh
 ```
+
+The first merge takes your own pushes from another machine. The second takes upstream pstack through the mirror. Then relink, since a skill upstream added has no link yet.
 
 There, `/poteto-mode` is `/poteto-mode` rather than `/pstack:poteto-mode`, and the `subagent_type: "poteto-agent"` lines in the skills resolve as written. Do not install the plugin on the same machine, or every skill registers twice.
 
