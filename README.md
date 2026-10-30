@@ -39,6 +39,26 @@ npx skills add backnotprop/pstack
 
 The CLI shows every skill in a list you can search. Select the skills you want, then select your agents.
 
+## Linked from a checkout
+
+On a second machine, such as a work laptop, keep one clone as the live source and link it into Claude Code. No plugin install, so the names stay as the skills write them.
+
+```bash
+git clone -b work-customizations https://github.com/justin-mendonca/pstack.git ~/work/pstack
+~/work/pstack/link.sh
+```
+
+`link.sh` links every skill into `~/.claude/skills/` and both agents into `~/.claude/agents/`. Run it again after each update, because a skill that upstream added has no link yet.
+
+To update:
+
+```bash
+cd ~/work/pstack && git fetch origin && git merge origin/main && ./link.sh
+```
+
+There, `/poteto-mode` is `/poteto-mode` rather than `/pstack:poteto-mode`, and the `subagent_type: "poteto-agent"` lines in the skills resolve as written. Do not install the plugin on the same machine, or every skill registers twice.
+
+
 ## Skills
 
 Cursor's original README is [further down this page](#pstack).
