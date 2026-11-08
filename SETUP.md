@@ -29,10 +29,13 @@ Run it again after every update. It is safe to run twice, and it skips any name 
 ## 2. Global instructions
 
 ```bash
-cat ~/work/pstack/GLOBAL-CLAUDE.md >> ~/.claude/CLAUDE.md
+grep -q "Global Claude Code instructions for pstack" ~/.claude/CLAUDE.md 2>/dev/null || {
+  [ -s ~/.claude/CLAUDE.md ] && [ -n "$(tail -c 1 ~/.claude/CLAUDE.md)" ] && printf '\n' >> ~/.claude/CLAUDE.md
+  cat ~/work/pstack/GLOBAL-CLAUDE.md >> ~/.claude/CLAUDE.md
+}
 ```
 
-Append rather than overwrite in case that file already has content. Then start a new session, because `CLAUDE.md` loads at session start.
+Append rather than overwrite in case that file already has content. The `grep` guard makes it safe to run twice, since a plain append would duplicate the block. The middle line adds a newline when the existing file lacks one, so the first heading does not glue onto your last line. Then start a new session, because `CLAUDE.md` loads at session start.
 
 If you cloned somewhere other than `~/work/pstack`, the block you appended names that path three times. Update all three.
 
