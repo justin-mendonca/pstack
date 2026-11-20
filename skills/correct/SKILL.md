@@ -27,6 +27,6 @@ Then fix the most frequent classes now, one commit each. Prove each new check fa
 
 ## Keep the rule table
 
-Last, keep a table in the agent instruction file that pairs each rule with what enforces it. When the operator corrects you, fix the mistake and add the rule. If the rule was already there and nothing enforces it, that's a repeat, so fix it at the highest level in the same change. Drop a rule once its mistake can't happen.
+Last, keep a table that pairs each rule with what enforces it. Write it to the project's agent instruction file (CLAUDE.md/AGENTS.md) only if the team agrees; otherwise keep it in a pstack-owned file (e.g. `.agents/pstack-corrections.md`, gitignored or local) and propose upstreaming entries to the team individually. When the operator corrects you, fix the mistake and add the rule. If the rule was already there and nothing enforces it, that's a repeat, so fix it at the highest level in the same change. Drop a rule once its mistake can't happen.
 
 **Reply:** each class with its evidence, the level you picked, and why a higher level didn't work.

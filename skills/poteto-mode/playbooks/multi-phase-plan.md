@@ -8,4 +8,6 @@
 4. Tests alone are not sufficient verification. A PR is verified only when its unit, live, and perf boxes are all checked. Each live box drives the real surface with a concrete scenario and a pass predicate. The perf box names the metric, the probe, the trunk baseline measured first, and the number that fails. A PR that changes an interaction waits for the operator's review before merge.
 5. Hand back the plan path and stop. Execution starts on the operator's explicit go.
 
+Each PR's forge operations follow the **Opening a PR** playbook. On a GitLab remote, use `glab mr` per [`../references/gitlab.md`](../references/gitlab.md).
+
 **Reply:** the plan path, the PR ids with their dependencies and the review-gated set, and what stays unproven.

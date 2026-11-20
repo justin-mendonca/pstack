@@ -12,6 +12,6 @@ Read the whole transcript. It is in the active workspace's session directory: in
 
 Keep a finding only if it will still hold in six months, would change what a future agent does, and routes to a skill the session used. Read that skill first and drop what it already says clearly. Drop one-offs and details that drift, such as SHAs, versions and counts. A skill that should have fired gets its description tuned. What a lint, script or check could enforce goes to the backlog, not into prose.
 
-Present Accepted (problem, proposal, skill), Rejected (reason) and Backlog, and wait for approval before editing any skill.
+Present Accepted (problem, proposal, skill), Rejected (reason) and Backlog, and wait for approval before editing any skill. Route edits to user-level (global) skills by default. Propose edits to project-level team skills only when the user explicitly asks; otherwise file them as suggestions for the team.
 
 Never edit a skill under `plugins/cache/`. Before approval, show its destination: `.cursor/skills/<skill>/` or `~/.cursor/skills/<skill>/` in Cursor, or your harness's project or user skill folder, such as `.claude/skills/<skill>/` or `~/.agents/skills/<skill>/`. After approval, copy the skill folder there and edit the copy. Never open a PR or push.
